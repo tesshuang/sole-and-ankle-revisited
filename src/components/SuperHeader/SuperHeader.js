@@ -9,6 +9,7 @@ import Icon from '../Icon';
 
 const SuperHeader = () => {
   return (
+    <>
     <Wrapper>
       <MarketingMessage>
         Free shipping on domestic orders over $75!
@@ -19,6 +20,8 @@ const SuperHeader = () => {
         <Icon id="shopping-bag" strokeWidth={1} />
       </UnstyledButton>
     </Wrapper>
+    <MobileWrapper />
+    </>
   );
 };
 
@@ -32,6 +35,10 @@ const Wrapper = styled.div`
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
+
+  @media (max-width: ${props => props.theme.breakpoints.laptop}) {
+    display: none;
+  }
 `;
 
 const MarketingMessage = styled.span`
@@ -46,6 +53,17 @@ const HelpLink = styled.a`
 
   &:not(:focus-visible) {
     outline: none;
+  }
+`;
+
+const MobileWrapper = styled.div`
+  display: none;
+
+  @media (max-width: ${props => props.theme.breakpoints.laptop}) {
+    display: block;
+    height: 10px;
+    width: 100%;
+    background: ${COLORS.gray[900]};
   }
 `;
 

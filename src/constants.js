@@ -20,7 +20,7 @@ export const WEIGHTS = {
 export const THEME = {
   breakpoints: {
     phone: '37.5rem',
-    table: '59.375rem',
+    tablet: '59.375rem',
     laptop: '81.25rem',
   }
 };
