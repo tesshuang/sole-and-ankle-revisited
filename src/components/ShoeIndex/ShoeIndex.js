@@ -35,8 +35,10 @@ const ShoeIndex = ({ sortId, setSortId }) => {
             Shoes
           </Breadcrumbs.Crumb>
         </Breadcrumbs>
-        <Spacer size={42} />
-        <ShoeSidebar />
+        <ColumnBottom>
+          <Spacer size={42} />
+          <ShoeSidebar />
+        </ColumnBottom>
       </LeftColumn>
     </Wrapper>
   );
@@ -47,10 +49,25 @@ const Wrapper = styled.div`
   flex-direction: row-reverse;
   align-items: baseline;
   gap: 32px;
+
+  @media (max-width: ${props => props.theme.breakpoints.laptop}) {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+`;
+
+const ColumnBottom = styled.div`
+  @media (max-width: ${props => props.theme.breakpoints.laptop}) {
+    display: none;
+  }
 `;
 
 const LeftColumn = styled.div`
   flex-basis: 248px;
+
+  @media (max-width: ${props => props.theme.breakpoints.laptop}) {
+    flex-basis: fit-content;
+  }
 `;
 
 const MainColumn = styled.div`
@@ -61,6 +78,12 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  > label {
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      display: none;
+    }
+  }
 `;
 
 const Title = styled.h2`
