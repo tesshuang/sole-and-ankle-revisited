@@ -19,7 +19,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
       isOpen={isOpen}
       onDismiss={onDismiss}
     >
-      <Content>
+      <Content aria-label="mobile-menu-modal">
         <UnstyledButton onClick={onDismiss}>
           <Icon id="close" strokeWidth={1} />
         </UnstyledButton>
@@ -96,7 +96,6 @@ const MobileFooter = styled.footer`
     color:  ${COLORS.gray[700]};
     text-decoration: none;
     font-size: 0.875rem;
-
   }
 `;
 
