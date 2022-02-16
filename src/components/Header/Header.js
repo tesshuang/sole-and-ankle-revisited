@@ -30,6 +30,9 @@ const Header = () => {
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
         </Nav>
         <MobileNav>
           <UnstyledButton>
@@ -58,11 +61,13 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: auto;
+  overflow-y: hidden;
 `;
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1rem, 8vw - 5rem, 3rem);
   margin: 0px 48px;
 
   @media (max-width: ${props => props.theme.breakpoints.laptop}) {
