@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import { QUERIES, COLORS } from '../../constants';
+import { QUERIES } from '../../constants';
 
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -77,12 +77,12 @@ const MobileNav = styled.nav`
   gap:  22px;
 
   > a {
-    color:  ${COLORS.gray[900]};
+    color:  var(--color-gray-900);
     text-decoration: none;
     font-size: 1.125rem;
 
     &:hover {
-      color: ${COLORS.secondary};
+      color: var(--color-secondary);
     }
   }
 `;
@@ -93,7 +93,7 @@ const MobileFooter = styled.footer`
   gap:  14px;
 
   > a {
-    color:  ${COLORS.gray[700]};
+    color:  var(--color-gray-700);
     text-decoration: none;
     font-size: 0.875rem;
   }
